@@ -21,7 +21,7 @@
       推理类别错误：
       如果是模型问题，训练集的标签是正确的，请按照同类别的output分析过程，更正样本的output。
       
-      如果是训练集本身确实感觉标签分配不合理，请将对应的id保存在 trainset_error.md的对应类下。
+      如果是训练集本身确实感觉标签分配不合理，请将对应的id保存在 trainset_error.md的对应类下，并在 train/reasonbyQwen72b_model3 下各个类中将其删除掉。
       
 
 
