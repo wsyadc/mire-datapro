@@ -3,6 +3,8 @@
 利用qwen-vl-72b处理图片场景识别中的数据，
 共有23个类，700个样本。
 
+## 数据分析需求
+
 设计了三个prompt得到三个组数据，分别存储在 train/reasonbyQwen72b_modeli  i取1,2,3，分别对应三种不同的promot。
 
 prompt设计请看mire-datapro/TrainSet_Enhancement/Qwen_72B_class_reason_para.py 文件中的内容。
@@ -22,11 +24,19 @@ prompt设计请看mire-datapro/TrainSet_Enhancement/Qwen_72B_class_reason_para.p
 
 你应该将reasonbyQwen72b_model i 三个文件夹放在你的train目录下.
 
+##运行
+
 如果想自己推理，或者修改prompt自己推理：
 TrainSet_Enhancement里面，call_classreason_1.sh这个脚本调用Qwen_72B_class_reason_para.py这个python文件，以批量生成推理结果。
 由于可能推理会被中断，
 在换货这个类中：9e2a1ebe-87c3-4547-b405-b592aabfdab-1384 这条含有不当内容处理不了(推理模式1情况下),当前保存的三个文件夹中都不含有这个样本.
-Qwen_72B_class_reason.py是Qwen_72B_class_reason_para.py的单类版本，你可以直接运行输入，类别和prompt模型即可。
+Qwen_72B_class_reason.py是Qwen_72B_class_reason_para.py的单类版本，你可以直接运行输入，类别(输入的类别不一定是全名，有些带括号什么的我直接删了，可以和我的命名同步)   以 prompt模式。
 
 记得修改绝对路径
 我是在windows下处理的。
+
+
+## 附加物
+qwen72B_enhance.py 之前做的对图片场景分类的700个样本做了信息提取。
+结果保存在 mire-datapro/train/info_ectra 下。
+分类7个json文件，每个里面有100个。
