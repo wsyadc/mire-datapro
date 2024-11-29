@@ -24,7 +24,7 @@ prompt设计请看mire-datapro/TrainSet_Enhancement/Qwen_72B_class_reason_para.p
 
 你应该将reasonbyQwen72b_model i 三个文件夹放在你的train目录下.
 
-##运行
+## 运行
 
 如果想自己推理，或者修改prompt自己推理：
 TrainSet_Enhancement里面，call_classreason_1.sh这个脚本调用Qwen_72B_class_reason_para.py这个python文件，以批量生成推理结果。
