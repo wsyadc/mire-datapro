@@ -25,18 +25,23 @@ prompt设计请看mire-datapro/TrainSet_Enhancement/Qwen_72B_class_reason_para.p
 你应该将reasonbyQwen72b_model i 三个文件夹放在你的train目录下.
 
 ## 运行
+我是在windows下处理的，
 
 如果想自己推理，或者修改prompt自己推理：
+
+TrainSet_Enhancement这个文件夹最好放和train同级目录(不放也行，因为我基本用的都是绝对路径)
+
 TrainSet_Enhancement里面，call_classreason_1.sh这个脚本调用Qwen_72B_class_reason_para.py这个python文件，以批量生成推理结果。
-由于可能推理会被中断，
+
+由于可能推理会被中断，不如
 在换货这个类中：9e2a1ebe-87c3-4547-b405-b592aabfdab-1384 这条含有不当内容处理不了(推理模式1情况下),当前保存的三个文件夹中都不含有这个样本.
-Qwen_72B_class_reason.py是Qwen_72B_class_reason_para.py的单类版本，你可以直接运行输入，类别(输入的类别不一定是全名，有些带括号什么的我直接删了，可以和我的命名同步)   以 prompt模式。
+
+Qwen_72B_class_reason.py是Qwen_72B_class_reason_para.py的单类版本，你可以直接运行输入，类别(输入的类别不一定是全名，有些带括号什么的我直接删了，可以和我的命名同步)   和 prompt模式。
 
 记得修改绝对路径
-我是在windows下处理的。
 
 
 ## 附加物
 qwen72B_enhance.py 之前做的对图片场景分类的700个样本做了信息提取。
-结果保存在 mire-datapro/train/info_ectra 下。
+结果我新建了一个文件夹放在 mire-datapro/train/info_ectra 下
 分类7个json文件，每个里面有100个。
